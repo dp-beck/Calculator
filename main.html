@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculator</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+<body>
+    <div id="calculator">
+      <div id="topDisplay">
+      </div>
+      
+      <div id="bottomDisplay"></div>
+      
+      <div id="row1">
+      <button onclick="AC()">AC</button> 
+      <button type="button" onclick="posNeg ()">+/-</button>
+      <button type="button" onclick="percent ()">%</button>
+      <button type="button" onclick="addOperator(this.innerHTML)">÷</button>
+      </div>
+      
+      <div id="row2">
+      <button type="button" onclick="addNum(this.innerHTML)">7</button> 
+      <button type="button" onclick="addNum(this.innerHTML)">8</button>
+      <button type="button" onclick="addNum(this.innerHTML)">9</button>
+      <button type="button" onclick="addOperator(this.innerHTML)">*</button>
+      </div>
+      
+      <div id="row3">
+      <button type="button" onclick="addNum(this.innerHTML)">4</button> 
+      <button type="button" onclick="addNum(this.innerHTML)">5</button>
+      <button type="button" onclick="addNum(this.innerHTML)">6</button>
+      <button type="button" onclick="addOperator(this.innerHTML)">-</button>
+      </div>
+      
+      <div id="row4">
+      <button type="button" onclick="addNum(this.innerHTML)">1</button> 
+      <button type="button" onclick="addNum(this.innerHTML)">2</button>
+      <button type="button" onclick="addNum(this.innerHTML)">3</button>
+      <button type="button" onclick="addOperator(this.innerHTML)">+</button>
+      </div>
+      
+      <button type="button" id="zero" onclick="addNum(this.innerHTML)">0</button> 
+      <button type="button" id="decimal" onclick="decimal ()">.</button>
+      <button type="button" id ="equal" onclick="equalBtn(storedValue, displayValue, operator)">=</button>
+      </div>
+    <script src="script.js"></script>
+  </body>
+  </html>

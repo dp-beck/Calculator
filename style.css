@@ -1,0 +1,114 @@
+#calculator {
+    border-style: solid;
+    border-radius: 5%;
+    height: 500px;
+    width: 300px;
+    margin: auto;
+    background: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 10% 16% 16% 16% 16% 16%;
+    grid-template-areas: 
+      "topDisplay topDisplay topDisplay topDisplay"
+      "bottomDisplay bottomDisplay bottomDisplay bottomDisplay"
+      "row1 row1 row1 row1"
+      "row2 row2 row2 row2"
+      "row3 row3 row3 row3"
+      "row4 row4 row4 row4"
+      "zero zero decimal equal"
+      ;
+  }
+  
+  #bottomDisplay {
+    text-align: right;
+    font-size: 20px;
+    color: black;
+    grid-area: bottomDisplay;
+    background: grey;
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    width: 95%;
+    margin-left: 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #topDisplay {
+    text-align: right;
+    grid-area: topDisplay;
+    background: grey;
+    color: #404040;
+    border-top-right-radius: 25%;
+    border-top-left-radius: 25%;
+    width: 95%;
+    margin-left: 8px;
+    font-size: 20px;
+    line-height: 200%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  #row1 {
+    grid-area: row1;
+  }
+  
+  #row1 * {
+    height:100%;
+    width: 23%;
+  }
+  
+  #row2 {
+   grid-area: row2;
+  }
+  
+  #row2 *{
+   height:100%;
+   width: 23%;
+  }
+  
+  #row3 {
+   grid-area: row3;
+  }
+  
+  #row3 *{
+   height:100%;
+   width: 23%;
+  }
+  
+  #row4 {
+   grid-area: row4;
+  }
+  
+  #row4 *{
+   height:100%;
+   width: 23%;
+  }
+  
+  #zero {
+   height:100%;
+   width: 100%;
+   border-radius: 25%;
+   grid-area: zero;
+  }
+  
+  #decimal {
+   height:100%;
+   width: 95%;
+   grid-area: decimal;
+  }
+  
+  #equal {
+   grid-area: equal;
+   height:100%;
+   width: 95%;
+  }
+  
+  button {
+     border: solid black 1px;
+     border-radius: 100%;
+     color: orange;
+     background: gray;
+     font-weight: bold;
+  }

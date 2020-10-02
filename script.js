@@ -1,6 +1,3 @@
-//add keyboard support
-//at least fix the spacing
-
 let bottomDisplay = document.getElementById("bottomDisplay");
 let topDisplay = document.getElementById("topDisplay");
 let displayValue;

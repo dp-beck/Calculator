@@ -13,10 +13,10 @@
       <div id="bottomDisplay"></div>
       
       <div id="row1">
-      <button onclick="AC()">AC</button> 
-      <button type="button" onclick="posNeg ()">+/-</button>
-      <button type="button" onclick="percent ()">%</button>
-      <button type="button" onclick="addOperator(this.innerHTML)">÷</button>
+      <button type="button" id="AC" onclick="AC()">AC</button> 
+      <button type="button" id="posNeg" onclick="posNeg()">+/-</button>
+      <button type="button" id="percent" onclick="percent()">%</button>
+      <button type="button" id="divide" onclick="addOperator(this.innerHTML)">÷</button>
       </div>
       
       <div id="row2">
@@ -41,7 +41,8 @@
       </div>
       
       <button type="button" id="zero" onclick="addNum(this.innerHTML)">0</button> 
-      <button type="button" id="decimal" onclick="decimal ()">.</button>
+      <button type="button" id="decimal" onclick="decimal()">.</button>
+      <button type="button" id="backspace" onclick="backspace()">⌫</button>
       <button type="button" id ="equal" onclick="equalBtn(storedValue, displayValue, operator)">=</button>
       </div>
     <script src="script.js"></script>

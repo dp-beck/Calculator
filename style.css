@@ -15,7 +15,7 @@
       "row2 row2 row2 row2"
       "row3 row3 row3 row3"
       "row4 row4 row4 row4"
-      "zero zero decimal equal"
+      "zero decimal backspace equal"
       ;
   }
   
@@ -50,7 +50,7 @@
     overflow: hidden;
   }
   
-  #row1 {
+ #row1 {
     grid-area: row1;
   }
   
@@ -58,7 +58,7 @@
     height:100%;
     width: 23%;
   }
-  
+
   #row2 {
    grid-area: row2;
   }
@@ -82,27 +82,27 @@
   }
   
   #row4 *{
-   height:100%;
-   width: 23%;
+    height:100%;
+    width: 23%;
   }
   
   #zero {
    height:100%;
    width: 100%;
-   border-radius: 25%;
+   border-radius: 100%;
    grid-area: zero;
   }
   
   #decimal {
    height:100%;
-   width: 95%;
+   width: 100%;
    grid-area: decimal;
   }
   
   #equal {
    grid-area: equal;
    height:100%;
-   width: 95%;
+   width: 100%;
   }
   
   button {

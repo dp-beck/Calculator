@@ -1,28 +1,27 @@
-//You should round answers with long decimals so that they don’t overflow the screen.
-//add a backspace button
 //add keyboard support
+//at least fix the spacing
 
-var bottomDisplay = document.getElementById("bottomDisplay");
-var topDisplay = document.getElementById("topDisplay");
-var displayValue;
-var operator = "";
-var storedValue;
-var equalsPressed = false;
+let bottomDisplay = document.getElementById("bottomDisplay");
+let topDisplay = document.getElementById("topDisplay");
+let displayValue;
+let operator = "";
+let storedValue;
+let equalsPressed = false;
 
 function add(a,b) {
-  return a+b;
+  return Math.round((a+b)*100000)/100000;
 }
 
 function multiply(a,b) {
-  return a*b;
+  return Math.round((a*b)*100000)/100000;
 }
 
 function subtract(a,b) {
-  return a-b;
+  return Math.round((a-b)*100000)/100000;
 }
 
 function divide(a,b) {
-  return a/b;
+  return Math.round((a/b)*100000)/100000;
 }
 
 function eraseOperator() {
@@ -30,29 +29,26 @@ function eraseOperator() {
 }
 
 function operate(a,b,operator) {
-  switch(true) {
-    case operator == "+":
+  switch(operator) {
+    case "+":
         topDisplay.innerHTML = topDisplay.innerHTML + displayValue + "=" + add(a,b);
         bottomDisplay.innerHTML = "";
         storedValue = "";
         equalsPressed = true;
         return displayValue = add(a,b);
-        break;
-    case operator == "-":
+    case "-":
         topDisplay.innerHTML = topDisplay.innerHTML + displayValue + "=" + subtract(a,b);
         bottomDisplay.innerHTML = "";
         storedValue = "";
         equalsPressed = true;
         return displayValue = subtract(a,b);
-        break;
-    case operator == "*":
+    case "*":
         topDisplay.innerHTML = topDisplay.innerHTML + displayValue + "=" + multiply(a,b);
         bottomDisplay.innerHTML = "";
         storedValue = "";
         equalsPressed = true;
         return displayValue = multiply(a,b);
-        break;
-    case operator == "÷":
+    case "÷":
         if (b==0) {
             bottomDisplay.innerHTML = "You can't divide by zero!";
             break;
@@ -62,7 +58,6 @@ function operate(a,b,operator) {
         storedValue = "";
         equalsPressed = true;
         return displayValue = divide(a,b);
-        break;
   }
 }
 
@@ -124,4 +119,12 @@ function decimal () {
     displayValue = displayValue + ".";
     bottomDisplay.innerHTML = displayValue;
     document.getElementById("decimal").disabled = true; 
+}
+
+function backspace () {
+  displayValue = parseFloat(displayValue.toString().slice(0, length-1));
+  if (isNaN(displayValue)) {
+    displayValue = 0;
+   }
+  bottomDisplay.innerHTML = displayValue;
 }

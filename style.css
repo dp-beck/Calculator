@@ -1,114 +1,81 @@
+body {
+  background: darkslategrey;
+}
 #calculator {
     border-style: solid;
     border-radius: 5%;
-    height: 500px;
-    width: 300px;
+    height: 375px;
+    width: 250px;
     margin: auto;
-    background: black;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 10% 16% 16% 16% 16% 16%;
-    grid-template-areas: 
-      "topDisplay topDisplay topDisplay topDisplay"
-      "bottomDisplay bottomDisplay bottomDisplay bottomDisplay"
-      "row1 row1 row1 row1"
-      "row2 row2 row2 row2"
-      "row3 row3 row3 row3"
-      "row4 row4 row4 row4"
-      "zero decimal backspace equal"
-      ;
+    background: #381D2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   
   #bottomDisplay {
     text-align: right;
     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
     color: black;
-    grid-area: bottomDisplay;
-    background: grey;
-    border-bottom-right-radius: 25%;
-    border-bottom-left-radius: 25%;
+    background: lightsteelblue;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
     width: 95%;
-    margin-left: 8px;
+    height: 30px;
+    margin-left: 4px;
+    margin-bottom: 10px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    border-right: solid wheat 1px;
+    border-bottom: solid wheat 1px;
+    border-left: solid wheat 1px;
   }
   
   #topDisplay {
     text-align: right;
-    grid-area: topDisplay;
-    background: grey;
+    background: lightsteelblue;
     color: #404040;
-    border-top-right-radius: 25%;
-    border-top-left-radius: 25%;
+    font-family: 'Courier New', Courier, monospace;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
     width: 95%;
-    margin-left: 8px;
+    height: 30px;
+    margin-left: 4px;
+    margin-top: 10px;
     font-size: 20px;
     line-height: 200%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    border-right: solid wheat 1px;
+    border-top: solid wheat 1px;
+    border-left: solid wheat 1px;
+
   }
   
- #row1 {
-    grid-area: row1;
-  }
-  
-  #row1 * {
-    height:100%;
-    width: 23%;
+.row {
+  display:flex;
+  justify-content: space-around;
   }
 
-  #row2 {
-   grid-area: row2;
-  }
-  
-  #row2 *{
-   height:100%;
-   width: 23%;
-  }
-  
-  #row3 {
-   grid-area: row3;
-  }
-  
-  #row3 *{
-   height:100%;
-   width: 23%;
-  }
-  
-  #row4 {
-   grid-area: row4;
-  }
-  
-  #row4 *{
-    height:100%;
-    width: 23%;
-  }
-  
-  #zero {
-   height:100%;
-   width: 100%;
-   border-radius: 100%;
-   grid-area: zero;
-  }
-  
-  #decimal {
-   height:100%;
-   width: 100%;
-   grid-area: decimal;
-  }
-  
-  #equal {
-   grid-area: equal;
-   height:100%;
-   width: 100%;
-  }
-  
-  button {
+.numberButton {
+  background: #F4F7F5;
+  border: solid 1px #222823;
+}
+
+.nonNumberButton {
+  background: #8b0000;
+  border: solid 1px #222823;
+}
+
+button {
      border: solid black 1px;
-     border-radius: 100%;
-     color: orange;
-     background: gray;
+     border-radius: 10%;
+     color: #FF5400; 
      font-weight: bold;
+     font-size: larger;
+     height: 56px;
+     width: 57px;
   }
